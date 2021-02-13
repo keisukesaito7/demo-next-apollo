@@ -1,0 +1,11 @@
+version: '3'
+services:
+  next:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/usr/src/app
+    command: sh -c "cd demo-app && yarn dev"
+    ports:
+      - "3000:3000"
